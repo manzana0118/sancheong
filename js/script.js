@@ -1,5 +1,28 @@
 window.onload = function() {
 
+    // aos 관련
+    AOS.init({
+        once: true
+    });
+
+    // 패밀리 사이트 기능
+    let family_hide = $('.family-hide');
+    let family_wrap =  $('.family-wrap');
+    let family = $('.family');
+
+    family_hide.click(function(){
+        family_wrap.fadeOut(300);
+        // 스크롤바 디폴트 처리
+        $('html').css('overflow-x', 'hidden');
+        $('html').css('overflow-y', 'auto');
+    });
+    
+    family.click(function(){
+        family_wrap.fadeIn(300);
+        // 스크롤바 없애기
+        $('html').css('overflow', 'hidden');
+    });
+    
     // 비주얼 슬라이드
     let sw_visual = new Swiper ('.sw-visual', {
         effect: 'fade',

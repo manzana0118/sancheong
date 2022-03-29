@@ -74,6 +74,167 @@ body {
     margin-left: 37px !important;
 }
 
+/* 패밀리사이트 */
+.family-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999999;
+}
+
+.family-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 85%;
+    max-width: 1600px;
+    background-color: #fff;
+    border-radius: 18px;
+
+    overflow: hidden;
+}
+
+.family-box::after {
+    content: '';
+    position: absolute;
+    right: 60px;
+    bottom: 0;
+    background: url('../images/logo.png') no-repeat center;
+    display: block;
+    width: 284px;
+    height: 154px;
+    opacity: 0.1;
+}
+
+.family-title {
+    position: relative;
+    display: block;
+    height: 145px;
+    background: #3179ce url('../images/family_bg.png') no-repeat left;
+
+    padding-top: 31px;
+    padding-bottom: 31px;
+    color: #fff;
+    font-size: 18px;
+    line-height: 42px;
+    text-align: center;
+}
+
+.family-title span {
+    position: relative;
+    display: block;
+    font-size: 30px;
+    font-weight: 600;
+    font-family: 'Gmarket Sans', sans-serif;
+    word-break: keep-all;
+}
+
+.family-list {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 35px 85px;
+}
+
+.family-list>li {
+    position: relative;
+    display: block;
+    width: 15%;
+}
+
+.family-list>li>span {
+    position: relative;
+    display: block;
+    height: 50px;
+    border: 1px solid #29a0e1;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgb(79 143 231 / 15%);
+    color: #0071b0;
+    font-size: 17px;
+    line-height: 48px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.family-list>li>ul {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+
+.family-list>li>ul li {
+    position: relative;
+    display: block;
+    padding: 0 20px;
+}
+
+.family-list>li>ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 2px solid #979797;
+}
+
+.family-list>li>ul li a {
+    position: relative;
+    display: inline-block;
+    color: #5b5b5b;
+    font-size: 15px;
+    line-height: 29px;
+    word-break: keep-all;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 200;
+    white-space: nowrap;
+}
+
+.family-list>li>ul li a:hover {
+    color: #444;
+    text-decoration: underline;
+}
+
+.family-wrap .i-pop-sm {
+    opacity: 0.6;
+    top: 5px;
+}
+
+.family-hide {
+    position: absolute;
+    right: 85px;
+    top: 50px;
+    display: block;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.family-hide::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url('../images/allmn_close.png') no-repeat center;
+    background-size: cover;
+}
+
 
 /* 상단 영역 */
 .header {
@@ -305,6 +466,11 @@ body {
     background-color: #0081c9;
 }
 
+.header-line-focus {
+    background-color: #0081c9 !important;
+}
+
+
 .header-bottom > .container {
     height: 100%;
 }
@@ -361,6 +527,7 @@ body {
     font-size: 22px;
     line-height: 21px;
     letter-spacing: -0.55px;
+    white-space: nowrap;
 
     transition: color 0.3s;
 }
@@ -374,7 +541,7 @@ body {
 }
 
 /* 서브메뉴 */
-.header:after {
+.header::after {
     content: '';
     position: absolute;
     left: 0;
@@ -421,7 +588,7 @@ body {
 .submenu-tit {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 35px;
 
     display: none;
     width: 145px;
@@ -473,7 +640,7 @@ body {
 .submenu-tit-img {
     position: absolute;
     left: -40px;
-    top: 185px;
+    top: 220px;
 
     display: none;
     width: 223px;
@@ -619,6 +786,23 @@ body {
     background-color: #3179cf;
     box-shadow:rgba(0, 51, 192, 0.2) 0 5px 20px;
     border: 1px solid #3179cf;
+}
+
+.i-pop-big {
+    position: relative;
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    background: url('../images/blank_sprite.png') no-repeat;
+    background-position: 0px -54px;
+    margin-left: 5px;
+    vertical-align: 0px;
+
+    transition: background-position 0s ease 0.06s;
+}
+
+.submenu-box-tit:hover .i-pop-big {
+    background-position: 0px -108px;
 }
 
 .submenu-list {
