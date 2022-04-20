@@ -23,6 +23,9 @@
     <link href="js/aos/aos.css" rel="stylesheet">
     <script src="js/aos/aos.js"></script>
 
+    <!-- font-awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+
     <!-- 사이트 스크립트 작성 -->
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
@@ -31,22 +34,30 @@
 </head>
 
 <body>
-    <!-- 클론코드 관련 안내 (모달창)
+    <!-- 모달창 -->
+    <button class="modal-bt">모달창열기</button>
     <div class="modal">
         <div class="modal-wrap">
-            <b>이 사이트는 스터디용으로 제작되었으며
-            리소스는 원저작자에게 있습니다.</b> <br>
-            본 사이트는 Chrome에 최적화 되어있습니다.
-            <div class="modal-desc">
-                본 사이트를 작업하면서 느꼈던 점...
-            </div>
-            <button class="modal-close">닫기</button>
+            <i class="fas fa-exclamation-triangle"></i>
+            <h2>
+                이 사이트는 스터디용으로 제작되었으며 <br> 리소스는 원저작자에게 있습니다. 
+            </h2>
+            <span class="modal-desc">
+                * 해당 사이트는 Chrome에 최적화되어 있습니다.
+            </span>
+            <button class="modal-close">CLOSE</button>
         </div>
-    </div> -->
+    </div>
     <div class="wrap">
         <!-- 상단 영역 -->
         <header class="header">
             <div class="header-top">
+                <!-- 반응형 상단 header -->
+                <div class="m-header-top clearfix">
+                    <button class="m-header-bt">전체메뉴</button>
+                    <button class="m-header-bt">패밀리사이트</button>
+                </div>
+                <!-- // 반응형 상단 header -->
                 <div class="container">
                     <a href="index.html" class="logo">
                         <img src="images/logo.png" alt="산엔청 SAN CHEONG">
@@ -68,6 +79,13 @@
                             <li><a href="#">Language</a></li>
                         </ul>
                     </div>
+                    <div class="help-icon clearfix">
+                        <button class="help-icon-map">문화관광</button>
+                        <button class="help-icon-mall">산앤청쇼핑몰</button>
+                        <button class="help-icon-search">검색</button>
+                        <button class="help-icon-menu">메뉴</button>
+                    </div>
+
                 </div>
             </div>
             <div class="header-bottom">
@@ -166,7 +184,7 @@
                                             <li>
                                                 <a href="#">
                                                     정부24포털
-                                                    <i class="i-pop-sm"></i> 
+                                                    <i class="i-pop-sm"></i>
                                                 </a>
                                             </li>
                                         </ul>
@@ -257,7 +275,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="submenu-list-box">    
+                            <div class="submenu-list-box">
                                 <div class="submenu-list-wrap">
                                     <div class="submenu-box">
                                         <a href="#" class="submenu-box-tit">행정정보공개</a>
@@ -351,8 +369,8 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>    
-                            <div class="submenu-list-box">   
+                            </div>
+                            <div class="submenu-list-box">
                                 <div class="submenu-list-wrap">
                                     <div class="submenu-box">
                                         <a href="#" class="submenu-box-tit">새소식</a>
@@ -394,8 +412,8 @@
                                         <a href="#" class="submenu-box-tit">행사/공연</a>
                                     </div>
                                 </div>
-                            </div>    
-                            <div class="submenu-list-box"> 
+                            </div>
+                            <div class="submenu-list-box">
                                 <div class="submenu-list-wrap">
                                     <div class="submenu-box">
                                         <a href="#" class="submenu-box-tit">산청현황</a>
@@ -497,7 +515,7 @@
                                         </ul>
                                     </div>
                                 </div>
-                            </div>    
+                            </div>
                         </div>
                         <!-- 분야별 정보 -->
                         <div class="submenu-part-box">
@@ -543,7 +561,7 @@
                                     부동산
                                 </a>
                             </div>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
@@ -557,34 +575,30 @@
             <section class="visual">
                 <div class="container">
                     <div class="visual-top clearfix" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
-                        <div class="visual-left clearfix">
-                            <div class="weather-wrap">
-                                <span class="weather-icon">2.8℃</span>
-                                <span class="weather-txt">
-                                    미세먼지
-                                    <i> 강수량 <em>0mm</em> </i>
-                                    <img src="images/info_icon.png" alt="정보">
-                                </span>
-                            </div>
-                            <div class="search-wrap">
-                                <form action="" class="search-form">
-                                    <label for="search-txt" class="search-label">Search</label>
-                                    <input type="text" id="search-txt" class="search-txt" placeholder="검색어를 입력해보세요.">
-                                    <button class="search-bt"></button>
-                                </form>
-                            </div>
+                        <div class="weather-wrap">
+                            <span class="weather-icon">2.8℃</span>
+                            <span class="weather-txt">
+                                미세먼지
+                                <i> 강수량 <em>0mm</em> </i>
+                                <img src="images/info_icon.png" alt="정보">
+                            </span>
                         </div>
-                        <div class="visual-right clearfix">
-                            <div class="sns-wrap">
-                                <img src="images/sns_icon.png" alt="sns">
-                                <span>산청 <b>SNS</b></span>
-                                <img src="images/sns_text.png" class="sns-txt" alt="소통해요">
-                                <div class="sns-list">
-                                    <a href="#" class="sns-blog"></a>
-                                    <a href="#" class="sns-facebook"></a>
-                                    <a href="#" class="sns-youtube"></a>
-                                    <a href="#" class="sns-insta"></a>
-                                </div>
+                        <div class="search-wrap">
+                            <form action="" class="search-form">
+                                <label for="search-txt" class="search-label">Search</label>
+                                <input type="text" id="search-txt" class="search-txt" placeholder="검색어를 입력해보세요.">
+                                <button class="search-bt"></button>
+                            </form>
+                        </div>
+                        <div class="sns-wrap">
+                            <img src="images/sns_icon.png" alt="sns" class="sns-icon">
+                            <span>산청 <b>SNS</b></span>
+                            <img src="images/sns_text.png" class="sns-txt" alt="소통해요">
+                            <div class="sns-list">
+                                <a href="#" class="sns-blog"></a>
+                                <a href="#" class="sns-facebook"></a>
+                                <a href="#" class="sns-youtube"></a>
+                                <a href="#" class="sns-insta"></a>
                             </div>
                         </div>
                     </div>
@@ -632,7 +646,7 @@
                         </div>
                         <div class="visual-right clearfix">
                             <div class="group" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
-                                <ul class="group-list">
+                                <ul class="group-nav">
                                     <li><a href="#">행정조직도</a></li>
                                     <li><a href="#">직원/업무안내</a></li>
                                     <li><a href="#">청사안내</a></li>
@@ -640,13 +654,13 @@
                             </div>
                             <div class="mayor" data-aos="fade-left" data-aos-duration="800" data-aos-delay="550">
                                 <a href="#">
-                                    명품산청, 행복산청 <br>
-                                    산청군수 <b>이재근</b>입니다.
+                                    <span>명품산청, 행복산청</span>
+                                    산청군수 <strong>이재근</strong>입니다.
                                 </a>
                                 <img src="images/mayor_img.png" alt="산청군수" class="mayor-img">
-                                <div class="mayor-list">
+                                <div class="mayor-link">
                                     <a href="#">공약사항</a>
-                                    <a href="#">인사말</a> <br>
+                                    <a href="#">인사말</a>
                                     <a href="#">군수에게바란다</a>
                                 </div>
                             </div>
@@ -657,7 +671,7 @@
             <!-- 소식 -->
             <section class="notice">
                 <div class="container clearfix">
-                    <div class="notice-left" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <div class="notice-left" data-aos="fade-up" data-aos-duration="800" data-aos-delay="550">
                         <div class="notice-top">
                             <ul class="notice-list clearfix">
                                 <li><a href="#" class="notice-list-focus">새소식</a></li>
@@ -684,35 +698,36 @@
                                         임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-28
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-1">새소식</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2022년 결혼이민자 통번역지원사업 안내
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        - 대상자 : 다문화가족, 외국인근로자와 관계있는 자 및 기관
+                                        - 서비스 내용 : 통역, 번역, 정보제공(일상생활, 의료, 법률, 교육) 등
+                                        - 지원언어 : 네팔어, 영어 및 기타 언어
+                                        - 이용시간 : 월 ~ 금(9:00 ~ 18:00)
+                                        - 이용방법 : 방문, 전화, 이메일, 팩스, 출장(외부) 등 (예약 필수)
+                                        - 문의 : 055-972-1018, 담당자 정엘리나
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-14
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-1">새소식</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        제1회 경상북도 영천시 공공데이터 활용 경진대회 안내 및 홍보
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        영천시에서는 공공데이터의 홍보, 활용을 위한 "제1회 영천시 공공데이터 활용 경진대회"를 추진하고 있습니다.
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-13
                                     </span>
                                 </a>
                             </div>
@@ -721,15 +736,47 @@
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-2">공고</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        기후위기 인식전환을 위한 홍보 지원사업 시행공고
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        「경상남도 환경기본조례」제20조 및「경상남도 기후변화 대응에 관한 조례」제7조 규정에 의하여 기후위기 인식전환을 위한 홍보 지원사업시행을 아래와
+                                        같이 공고합니다.
+
+                                        1. 신청자격
+                                        　- 기후, 지속가능 발전 관련 업무 추진 비영리민간단체, 비영리사단·재단법인(도내 등록, 도내 지부 등)
+                                        　- 경상남도 조례에 따라 설립된 단체, 협의회 등
+
+
+                                        　① 공익활동을 주목적으로 하는 법인 또는 단체로서 최근 1년 이상 공익활동 실적이 없는 단체
+                                        　② 특정정당 또는 선출직 후보를 지지‧지원 또는 반대하는 단체
+                                        　③ 법인이 아닌 단체로서 대표자 또는 관리인이 없는 단체 및 친목 단체
+                                        　④ 불법시위를 주최‧주도하거나 적극 참여한 단체와 구성원이 소속 단체 명의로
+                                        불법 시위에 적극 참여하여 「집회 및 시위에 관한 법률」위반 등으로 처벌받은 단체
+
+                                        2. 지원사업
+                                        　- 기후위기 대응, 탄소중립 실현을 위한 저탄소 실천의식 확산을 위한 소통 프로그램 발굴‧시행 사업
+                                        　- 홍보물 기획‧제작, 언론홍보, 온라인 홍보 사업
+                                        　※ 상기 외 환경보전활동, 환경교육, 낙동강수계, 습지 관련 사업은 지원 사업에서 제외
+
+
+                                        　① 관할구역 외의 지역에서 추진하는 사업
+                                        　② 자체 자산구입 또는 재산증식 위주의 사업
+                                        　③ 지원 받은 재원으로 다른 단체 또는 개인을 지원하는 사업
+                                        　④ 동일 또는 유사한 사업으로 국비·시비·도비 등의 지원을 받는 사업
+                                        　⑤ 인건비 등의 경상적 경비 또는 장학금 위주사업
+                                        　⑥ 일회성 소모적인 이벤트 사업 등
+
+                                        3. 지원범위 : 1단체, 2억원
+                                        4. 사업추진기간 : 2022. 6월 ~ 12월
+
+                                        자세한 사항은 붙임을 참조하시기 바랍니다.
+
+                                        붙임.　공고문 1부.
+                                        　　　신청서식 1부.
+                                        　　　예산편성기본원칙 및 회계처리기준 1부. 끝.
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-13
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
@@ -743,18 +790,18 @@
                                         임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-02-15
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-2">공고</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        하천점용허가 고시(산청군수 상하수도과장)
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        하천법 제33조 및 같은 법 시행령 제38조의 규정에 의하여 하천 점용을 붙임과 같이 허가하였음을 고시하오니, 이해관계인은
+                                        산청군청(안전건설과)에 비치된 관계서류를 보시기 바랍니다.
+                                        붙임.　고시문 1부. 끝.
                                     </p>
                                     <span class="notice-date">
                                         <i></i>2022-01-28
@@ -766,43 +813,42 @@
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-3">채용<br>·<br>시험</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2022년 오부면 하절기 방역소독사업 기간제근로자 채용 안내
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        2022년 오부면 하절기 방역소독사업 기간제근로자 채용 안내
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-15
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-3">채용<br>·<br>시험</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2022년 금서면 기본형 공익직불제 업무보조원 채용
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        2022년 금서면 기본형 공익직불제 업무보조원 채용
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-14
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-3">채용<br>·<br>시험</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        (재)산청세계전통의약항노화엑스포조직위원회 사무처장 채용 서류전형 합격자 발표 및 면접시험 시행계획 안내
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        [ (재)산청세계전통의약항노화엑스포조직위원회 공고 제2022-5호 ]
+                                        재)산청세계전통의약항노화엑스포조직위원회 공고 제2022-4호(2022.3.21.)에 따라 (재)산청세계전통의약항노화엑스포조직위원회 사무처장 채용
+                                        서류전형 합격자 발표 및 면접시험 시행계획을 붙임과 같이 공고합니다.
+                                        붙임.　공고문 1부. 끝.
+                                        2022년 4월 14일
+                                        (재)산청세계전통의약항노화엑스포조직위원장
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-10
                                     </span>
                                 </a>
                             </div>
@@ -811,43 +857,37 @@
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-4">모집</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2022년 산청군청소년수련관 청소년의 달 행사 안내
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        2022년 산청군청소년수련관 청소년의 달 행사 안내
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-14
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-4">모집</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        목면시배 유지 관리위탁자 모집
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        목면시배 유지 관리위탁자 모집
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-12
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-4">모집</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2022년 웰니스코디네이터양성 2기 교육생 모집
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        2022년 웰니스코디네이터양성 2기 교육생 모집
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-11
                                     </span>
                                 </a>
                             </div>
@@ -860,49 +900,49 @@
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-6">계약<br>정보</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        화현, 새터, 내방마을 상수도 수도계량기 정비공사
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-14
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-6">계약<br>정보</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2022년 작업임도 신설사업(단성사월~입석지구)
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-14
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-6">계약<br>정보</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        단성면 생활체육시설조성 족구장 조명탑 이설공사
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-13
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        천상화원 황매산 친환경주차장 배수개선공사 - 흙콘크리트
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-02-25
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        내평 골다리골 농로 개설공사 관급자재 구입(파형강관)
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-02-03
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        봉화마을 농로 포장공사
                                     </p>
                                     <span class="notice-date">
                                         <i></i>2022-01-28
@@ -914,43 +954,79 @@
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-7">행사<br>·<br>공연</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        전기수(傳奇叟) 이야기<나는 이렇게 들었다> 공연 안내
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        ▢ 공연명 : 전기수(傳奇叟) 이야기
+                                        ▢ 장 소 : 산청군문화예술회관 대공연장
+                                        ▢ 일 시 : 2022. 04. 13.(수) ~ 14.(목) 19:30
+                                        ▢ 연 출 : 고능석
+                                        ▢ 출 연 : 흥삼 역_김헌근 / 김진사 역_송광일 / 천서방 역_최동석 / 섭섭이 역_박진희 / 헐랭이 역_강규안 / 쌍돌댁 역_황윤희 /
+                                        박서방 역_신경준 / 삼식이 역_지상수 / 함양댁 역_한지원 / 앵실이 역_조우숙
+                                        ▢ 스태프 : 작_김인경 / 연출_고능석 / 제작_정대균 / 조연출_김진호 / 기획_박낭주, 김서현 / 홍보마케팅_이동은, 정지윤, 김현기 /
+                                        무대디자인_황지선 / 조명디자인_이금철 / 음향op_황세현 / 분장_도도아카데미 안향미, 강유리 / 사진촬영_배길효 / 영상촬영_상상미디어 /
+                                        의상·소품_김도영 / 무대제작_아우라 스테이지 / 홍보물디자인_soparners
+                                        ▢ 가 격 : 무료관람
+                                        ▢ 등 급 : 12세 이상(초등학교 5학년 이상)
+                                        ▢ 문 의 : (사)극단현장 055-746-7413
+                                        ▢ 예 약 : 010-5654-1624
+                                        ▢ 제 작 : (사)극단현장
+                                        ▢ 주최·주관 : 산청문화예술회관, 전문예술법인 극단현장
+                                        ▢ 후 원 : 경남문화예술진흥원, 경상남도
+                                        ▢ 작품 줄거리
+                                        조선 말, 한양 배오개시장에서 구경꾼들에게 ‘갈의거사’ 이야기를 들려주던 전기수 흥삼을 관졸들이 몰려들어 잡아가려 한다. 보부상 천서방의 기지로
+                                        겨우 도망친 흥삼은 천서방을 따라 경상도 산청의 가리울골로 내려간다. 가리울골은 농사가 잘 되지 않아 마을 사람들은 천서방 같은 보부상을 꾸려
+                                        재물을 모은 황부자의 재력에 기대 살고 있었다. 그런데 흥삼이 내려간 이후부터 황부자의 말이라면 죽는 시늉까지 하던 가리울골 사람들이 불만을
+                                        털어놓기 시작하고, 없는 자리에서는 대놓고 욕을 하는 것이 아닌가? 급기야 황부자는 한양에 사는 먼 친척인 김진사에게 도움을 청하게 되고,
+                                        김진사는 이런저런 조사를 통해 흥삼이 분란의 중심에 있음을 알고 그를 문초하기 시작한다. 가리울골 사람들은 흥삼을 구하기 위해 기막힌 작전을
+                                        펼치는데...
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-04-06
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-7">행사<br>·<br>공연</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2021년 방방곡곡 문화공감사업 <왼손이> 공연 안내
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        2021년 방방곡곡 문화공감사업 공연을
+                                        아래와 같이 안내하오니 많은 관람 부탁드립니다.
+
+                                        ■ 공연일시 : 2021년 11월 26일(금) 19시
+                                        ■ 공연명 :
+                                        ■ 공연장소 : 산청문화예술회관 대공연장
+                                        ■ 공연단체 : 극단꼭두광대
+                                        ■예약 문의 : 055-970-6404(코로나19 확산방지를 위해 관람인원은 100명으로 한정하며 전화 예약 시행)
+
+                                        ※ 관람시 코로나 19로 인한 방역수칙 준수에 협조해 주시기 바랍니다
+                                        (관람자 간 거리두기, 발열체크, 안심콜 또는 명부 작성, 마스크 착용 등)
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2021-11-21
                                     </span>
                                 </a>
                                 <a href="#" class="notice-link">
                                     <span class="notice-cate notice-cate-7">행사<br>·<br>공연</span>
                                     <p class="notice-tit">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법」 확인서 발급 신청사실 공고
+                                        2021년 방방곡곡 문화공감사업 온가족을 위한 아이조아 잼스틱 콘서트 공연 안내
                                     </p>
                                     <p class="notice-txt">
-                                        「부동산소유권 이전등기 등에 관한 특별조치법 」제11조 제1항에 따른 확인서 발급신청이 있어 같은 법 제11조 제6항 제3호 및 같은 법 시행령
-                                        제14조에 의하여 다음 사항을 공고하오니, 이해관계인은 공고기간 내에 이의신청을 하시기 바랍니다. 국무총리는 국회의 동의를 얻어 대통령이
-                                        임명한다. 명령·규칙 또는 처분이 헌법이나 법률에 위반되는 여부가 재판의 전제가 된 경우에는 대법원은 이를 최종적으로 심사할 권한을 가진다.
+                                        2021년 방방곡곡 문화공감사업 공연을
+                                        아래와 같이 안내하오니 많은 관람 부탁드립니다.
+
+                                        ■ 공연일시 : 2021년 11월 12일(금) 19시
+                                        ■ 공연명 :
+                                        ■ 공연장소 : 산청문화예술회관 대공연장
+                                        ■ 공연단체 : 씨엠컴퍼니
+                                        ■예약 문의 : 055-970-6404(코로나19 확산방지를 위해 관람인원은 100명으로 한정하며 전화 예약하신 분에 한하여 입장 가능)
+
+                                        ※ 관람시 코로나 19로 인한 방역수칙 준수에 협조해 주시기 바랍니다
+                                        (관람자 간 거리두기, 발열체크, 안심콜 또는 명부 작성, 마스크 착용 등)
                                     </p>
                                     <span class="notice-date">
-                                        <i></i>2022-01-28
+                                        <i></i>2022-11-05
                                     </span>
                                 </a>
                             </div>
