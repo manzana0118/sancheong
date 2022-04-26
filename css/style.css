@@ -3675,6 +3675,10 @@ body {
     .quick .container {
         width: 100%;
     }
+
+    .quick-list {
+        width: 80%;
+    }
 }
 
 @media all and (max-width: 800px) {}

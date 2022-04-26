@@ -5,18 +5,18 @@ window.onload = function () {
             once: true
         });
 
-        // // 모달창
-        // let modal_close = $('.modal-close');
-        // let modal = $('.modal');
+        // 모달창
+        let modal_close = $('.modal-close');
+        let modal = $('.modal');
 
-        // modal_close.click(function () {
-        //     modal.hide();
-        // });
+        modal_close.click(function () {
+            modal.hide();
+        });
 
-        // let modal_bt = $('.modal-bt');
-        // modal_bt.click(function () {
-        //     modal.show();
-        // });
+        let modal_bt = $('.modal-bt');
+        modal_bt.click(function () {
+            modal.show();
+        });
 
         // 패밀리 사이트 기능
         let family_hide = $('.family-hide');
