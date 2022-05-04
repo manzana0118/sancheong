@@ -3705,7 +3705,7 @@ body {
     top: 48px;
 
     display: block;
-    width: 100vw;
+    width: 112vw;
     height: 694px;
 
     background: url('../images/rowgroup6_bg.jpg') no-repeat;
@@ -4151,11 +4151,26 @@ body {
     .tour .container {
         width: 1200px;
     }
+
+    .tour-slide .swiper-container {
+        left: 0px;
+        width: 1200px;
+        margin-left: 115px;
+    }
+
+    .tour .container::before {
+        left: 0px;
+        width: 150%;
+    }
 }
 
 @media all and (max-width: 1200px) {
     .tour .container {
         width: 1000px;
+    }
+
+    .tour-slide .swiper-container {
+        left: 155px;
     }
 }
 
