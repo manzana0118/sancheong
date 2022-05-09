@@ -8,6 +8,11 @@
     padding: 0;
     box-sizing: border-box;
     /* outline-style: none; */
+    font-family: 'Spoqa Han Sans Neo', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'Gulim', '굴림', sans-serif;
+}
+
+button {
+    font-family: 'Spoqa Han Sans Neo', 'Malgun Gothic', '맑은 고딕', 'Dotum', '돋움', 'Gulim', '굴림', sans-serif;
 }
 
 a {
@@ -139,7 +144,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 10px;
+    bottom: 20px;
     display: block;
     width: 150px;
     height: 30px;
@@ -1641,7 +1646,7 @@ body {
     position: absolute;
     right: 25px;
     top: 50%;
-    transform: translateY(-22%);
+    transform: translateY(-50%);
     display: block;
     font-size: 0;
 }
@@ -4170,7 +4175,20 @@ body {
     }
 
     .tour-slide .swiper-container {
-        left: 155px;
+        left: -35px;
+    }
+    
+    .tour .container::after {
+        right: calc(109% - 575px);
+    }
+
+    .sw-tour-control {
+        right: 500px;
+        top: 81px;
+    }
+
+    .tour-text {
+        margin-left: 40px;
     }
 }
 
@@ -4242,6 +4260,7 @@ body {
 
     vertical-align: 5px;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 .sw-banner-prev::after {
@@ -4257,6 +4276,7 @@ body {
 
     background: url('../images/banner_sprite.png') no-repeat;
     background-position: 0px 0px;
+    cursor: pointer;
 }
 
 .sw-banner-pause {
@@ -4271,6 +4291,7 @@ body {
 
     vertical-align: 5px;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 .sw-banner-pause::after {
@@ -4300,6 +4321,7 @@ body {
 
     vertical-align: 5px;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 .sw-banner-next::after {
@@ -4702,15 +4724,101 @@ body {
     .footer .container {
         width: 1000px;
     }
+
+    .f-site-info {
+        font-size: 15px;
+    }
+
+    .copy {
+        word-break: keep-all;
+    }
+
+    .copy span {
+        white-space: nowrap;
+    }
 }
 
 @media all and (max-width: 1000px) {
     .footer .container {
-        width: 800px;
+        width: 960px;
+    }
+
+    .tour-left {
+        padding-left: 30px;
+    }
+
+    .tour-title h2 {
+        white-space: nowrap;
+    }
+
+    .sw-tour-control {
+        right: 595px;
     }
 }
 
-@media all and (max-width: 800px) {}
+@media all and (max-width: 800px) {
+    .footer .container {
+        width: 760px;
+    }
+    
+    .sw-tour-control {
+        right: auto;
+        left: calc(3% + 300px);
+        top: 123px;
+    }
+
+    .f-site-link {
+        display: block;
+        width: auto;
+        height: auto;
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 6%;
+        padding-left: 3%;
+    }
+
+    .f-site-box {
+        display: block;
+        width: 49%;
+        margin-bottom: 15px;
+        float: left;
+    }
+
+    .f-site-box:nth-child(2n-1) {
+        margin-right: 10px;
+    }
+
+    .f-site-bt {
+        position: relative;
+        display: block;
+        width: 100%;
+
+        color: #2b2b2b;
+        font-size: 15px;
+        text-align: left;
+        line-height: 17px;
+        letter-spacing: -0.025em;
+        
+        border-radius: 10px;
+        background-color: #f8f9fb;
+
+        padding-top: 16px;
+        padding-bottom: 17px;
+        padding-left: 20px;
+        transition-property: background-color;
+        transition-duration: 0.25s;
+        transition-timing-function: linear;
+    }
+
+    .f-site-lnfo {
+        font-size: 13px;
+        padding: 0 20px 0 20px;
+    }
+
+    .site-lnfo-img {
+        display: none;
+    }
+}
 
 @media all and (max-width: 770px) {}
 
