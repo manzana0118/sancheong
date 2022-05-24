@@ -12,3 +12,4 @@ URL : https://www.sancheong.go.kr/www/index.do
     - 서브메뉴
     - 슬라이드
     - 탭메뉴
+    - 파비콘 제작 및 삽입
